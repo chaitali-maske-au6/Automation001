@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.0 on win32)" generated="20190920 09:51:15.040" rpa="false">
+<suite id="s1" name="StartClose" source="C:\Users\Chaitali\PycharmProjects\UserDefineKeyword\TestCases\LOginTC\StartClose.robot">
+<test id="s1-t1" name="Robot Test Case">
+<kw name="Read Element Locator">
+<arguments>
+<arg>Registration.username_textbox_name</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<kw name="Read Locator From Json" library="Locator">
+<arguments>
+<arg>${JsonPath}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20190920 09:51:15.490" level="INFO">${result} = fld_username</msg>
+<status status="PASS" starttime="20190920 09:51:15.490" endtime="20190920 09:51:15.490"></status>
+</kw>
+<msg timestamp="20190920 09:51:15.490" level="INFO">${username} = fld_username</msg>
+<status status="PASS" starttime="20190920 09:51:15.490" endtime="20190920 09:51:15.490"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${username}</arg>
+<arg>testing</arg>
+</arguments>
+<msg timestamp="20190920 09:51:15.490" level="INFO">Typing text 'testing' into text field 'name:fld_username'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190920 09:51:15.490" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20190920 09:51:15.490" endtime="20190920 09:51:15.490"></status>
+</kw>
+<msg timestamp="20190920 09:51:15.490" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20190920 09:51:15.490" endtime="20190920 09:51:15.490"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20190920 09:51:15.490" endtime="20190920 09:51:15.490" critical="yes">No browser is open.</status>
+</test>
+<test id="s1-t2" name="Robot Next Test Case">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>add_type</arg>
+<arg>office</arg>
+</arguments>
+<msg timestamp="20190920 09:51:15.506" level="INFO">Selecting 'office' from radio button 'add_type'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190920 09:51:15.506" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20190920 09:51:15.506" endtime="20190920 09:51:15.506"></status>
+</kw>
+<msg timestamp="20190920 09:51:15.506" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20190920 09:51:15.506" endtime="20190920 09:51:15.506"></status>
+</kw>
+<status status="FAIL" starttime="20190920 09:51:15.506" endtime="20190920 09:51:15.506" critical="yes">No browser is open.</status>
+</test>
+<status status="FAIL" starttime="20190920 09:51:15.056" endtime="20190920 09:51:15.506"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" id="s1" name="StartClose">StartClose</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
