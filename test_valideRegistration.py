@@ -22,7 +22,7 @@ from DataGenerate import DataGen
 #     return li
     # li = [['uname1','pass1'],['uname2','pass2'],['uname3','pass3']]
     # return li
-@pytest.mark.parametrize('data',DataGen.dataGenerator())
+@pytest.mark.parametrze('data',DataGen.dataGenerator())
 def test_ValidateRegistration(data):
     driver=InisiteDriver.startBrowser()
 
